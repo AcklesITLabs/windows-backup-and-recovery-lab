@@ -28,12 +28,24 @@ This project demonstrates how to perform a full Windows system backup using buil
 ---
 
 ## 🧪 Commands Used
-wbAdmin start backup -backupTarget:B: -include:C: -allCritical -quiet
-wbAdmin get versions
-wbAdmin get items -version:<timestamp>
 
+- Start full system backup:
 
----
+```
+wbadmin start backup -backupTarget:B: -include:C: -allCritical -quiet
+```
+
+- View available backup versions:
+
+```
+wbadmin get versions
+```
+
+- Inspect backup contents (use a timestamp from `wbadmin get versions`):
+
+```
+wbadmin get items -version:<timestamp>
+```
 
 ## 📊 Results
 - Full system image successfully created  
